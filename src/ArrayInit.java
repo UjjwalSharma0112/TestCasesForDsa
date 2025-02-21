@@ -4,9 +4,11 @@ import java.util.function.Consumer;
 public class ArrayInit {
     private final ArrayList<Integer> input;
     private final ArrayList<Integer> output;
+
     ArrayInit(String ip,String op){
         input=initArray(ip);
         output=initArray(op);
+
     }
     static ArrayList<Integer> initArray(String data){
         ArrayList<Integer> nums=new ArrayList<Integer>();
@@ -19,10 +21,10 @@ public class ArrayInit {
         }
         return nums;
     }
-    boolean result(Consumer<ArrayList<Integer>>func){
-        //put the function call here
-        func.accept(input);
-        return input.equals(output);
+    boolean result(ArrayList<Integer>generatedOutput){
+           //put the function call here
+            return generatedOutput.equals(output);
+
     }
 
 }
